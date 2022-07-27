@@ -6,32 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
-
+<link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        bodY {
-            background: rgb(238, 174, 202);
-            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-
-        }
-
-        .container {
-            height: 100vh;
-            width: 99vw;
-            display: flex;
-            /* background-color: rgba(148, 187, 233, 0.2); */
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container>form {
-            padding: 3% 4%;
-            background-color: #fff;
-            border-radius: 14px;
-            border: 1.8px solid blue;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        }
-    </style>
 </head>
 
 <body>
@@ -78,55 +54,8 @@
     </section>
 
 
-    <script>
-        function calculate() {
-            var username = document.getElementById("username").value;
-            var weight = document.getElementById("weight").value;
-            var weight_unit = document.getElementById("weight_unit").value;
-            var height = document.getElementById("height").value;
-            var height_unit = document.getElementById("height_unit").value;
-
-            if (weight_unit == "1") {
-                weight = Math.round(weight / 2.205); //pound
-                console.log(weight);
-            }
-            if (weight_unit == "2") {
-                weight = weight; //kg
-                console.log(weight);
-
-            }
-            if (weight_unit == "3") {
-                weight = weight / 1000; //gram
-                console.log(weight);
-
-            }
-
-            if (height_unit == "4") {
-                height = Math.round(height / 100); //cm
-                console.log(height);
-            }
-            if (height_unit == "5") {
-                height = height; //meter
-                console.log(height);
-            }
-            if (height_unit == "6") {
-                height = Math.round(height / 3.281); //foot
-                console.log(height);
-            }
-            var BMI_value = Math.round(weight / (height * height));
-                console.log(`Your BMI is ${BMI_value}`);
-            if (BMI_value < 18) {
-                console.log('underweight');
-
-            }
-
-            else if (BMI_value >= 18 || BMI_value<=22) {
-                console.log('Weight is OK');
-            }
-            else {
-                console.log('overweight');
-            }
-        }
+    <script src="main.js">
+      
     </script>
 
 
